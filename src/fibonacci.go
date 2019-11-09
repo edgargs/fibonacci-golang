@@ -21,10 +21,13 @@ func main() {
 	// Function calls are evaluated left-to-right.
 	//fmt.Println(f(), f(), f(), f(), f())
 	arg := os.Args[1]
+	fmt.Println("Value of parameter is: ",arg)
 	x, err := strconv.Atoi(arg)
+	var result uint64 = 0
 	if err == nil {
-		for i := 0; i < x; i++ {
-			fmt.Println(f())
+		for i := 0; i <= x; i++ {
+			result = f()
 		}
+		fmt.Println("Result with Golang: ",result)
 	}
 }
